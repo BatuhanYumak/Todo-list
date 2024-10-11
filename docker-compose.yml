@@ -8,15 +8,15 @@ services:
       - .:/app
     ports:
       - "8000:8000"
-    depends_on:
-      - frontend
 
   frontend:
+    container_name: todo-frontend
     build:
-      context: ./frontend
+      context: ./todo-list
       dockerfile: Dockerfile
     volumes:
-      - ./frontend:/frontend
+      - ./todo-list:/app
+      - /app/node_modules
     ports:
-      - "3000:3000"
-    command: npm run start
+      - "5173:5173"
+
