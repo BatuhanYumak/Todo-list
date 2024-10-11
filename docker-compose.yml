@@ -8,3 +8,15 @@ services:
       - .:/app
     ports:
       - "8000:8000"
+
+  frontend:
+    container_name: todo-frontend
+    build:
+      context: ./todo-list
+      dockerfile: Dockerfile
+    volumes:
+      - ./todo-list:/app
+      - /app/node_modules
+    ports:
+      - "5173:5173"
+
