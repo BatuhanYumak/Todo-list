@@ -2,13 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>Todo-list</title>
   </head>
   <body>
-    <p>My name is Batuhan and I am a full stack developer.</p>  
-    <div id="app"></div>
+    <div class="container">
+      <h1>Todo List</h1>
+      <div class="todo-form">
+        <input type="text" id="new-task"
+          placeholder="Voeg een nieuwe taak toe...">
+        <button id="add-task-btn">Toevoegen</button>
+      </div>
+      <ul id="task-list"></ul>
+    </div>
+
     <script type="module" src="src/main.ts"></script>
   </body>
 </html>
